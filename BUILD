@@ -38,7 +38,8 @@ cc_bin(
 consumer(
     name = "consumer",
     srcs = [
-        ":variant_a",
+        # With only one dependency it works
+        #":variant_a",
         ":variant_b",
     ],
 )
