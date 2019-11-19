@@ -14,7 +14,8 @@ def _consumer_impl(ctx):
 
     return DefaultInfo(
         executable = out,
-        runfiles = runfiles,
+        # Without runfiles it is buildable, but not runnable
+        # runfiles = runfiles,
         files = depset(direct = [out]),
     )
 
