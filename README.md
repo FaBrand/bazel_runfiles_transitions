@@ -15,6 +15,10 @@ To use different compiled versions of the "library" transitions define the flag 
 
 Another target depends on these two binaries that are built with different configurations through runfiles.
 
+### Different scenarios
+On branch `without_runfiles` there is a buildable but not runnable example.
+On brnach `only_one_dependency` there is a buildable and runnable example, but not all desired dependencies can be used.
+
 # Error
 If a rule adds two binaries with different transitions, one is built with the wrong set of flags.
 This is expressed by the compilation failing because of the missing header.
